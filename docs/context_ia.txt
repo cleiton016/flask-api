@@ -1,0 +1,28 @@
+O usuário está desenvolvendo uma API com Flask e autenticação via Firebase.
+
+### **Detalhes do projeto:**  
+- **Linguagem:** Python  
+- **Framework:** Flask  
+- **Autenticação:** Firebase Authentication  
+- **Banco de Dados:** Firestore  
+- **Estrutura de Pastas:**  
+  - `app/` → Contém o código principal da API  
+    - `routes/` → Define as rotas da API
+    - `routes/__init__py` → Obtem todas as rotas automaticamente e as registra no blueprints
+    - `controllers/` → Gerencia a lógica das requisições  
+    - `services/` → Contém regras de negócio e interações com o Firestore
+    - `services/base_service.py` → Modelo base da service com metodo comum para todas as services
+    - `schemas/` → Define os esquemas de validação dos dados
+    - `models/` → Define a estrutura dos dados  
+    - `__init__.py` → Inicializa a aplicação
+  - `config.py` → Contém as configurações da aplicação
+  - `main.py` → Arquivo principal da aplicação
+  - `Dockerfile` → Arquivo de configuração do Docker
+  - `docker-compose.yml` → Arquivo de configuração do Docker Compose
+  - `requirements.txt` → Lista de dependências do projeto
+  - `docs/` → Contém documentação  
+    - `setup.md` → Guia de configuração do projeto  
+    - `comandos-docker.md` → Lista de comandos úteis do Docker  
+    - `insomnia_v1.yaml` → Coleção do Insomnia para testar requisições  
+  - `template/` → Contém um modelo para criação de novos módulos  
+    - `README.md` → Explica como utilizar o template.

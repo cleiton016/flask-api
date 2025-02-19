@@ -1,0 +1,351 @@
+_type: export
+__export_format: 4
+__export_date: 2025-02-19T12:27:01.748Z
+__export_source: insomnia.desktop.app:v10.3.1
+resources:
+  - _id: req_31fff23f8a0a41c9949e829cbd03e307
+    parentId: fld_8c3dbd2764cd4c399ca723d4692c929e
+    modified: 1739927422490
+    created: 1739745813567
+    url: "{{ _.baseUrl }}accounts/{% response 'body',
+      'req_55a63f4944c94de09f45b8888e348cd9', 'b64::JC5sb2NhbElk::46b', 'never',
+      60 %}"
+    name: list
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_fdef0648520d4559bf280c5dd826593e
+        name: User-Agent
+        value: insomnia/10.3.1
+      - description: ""
+        disabled: false
+        id: pair_b1197f1f9ab743eb9876b7d3f2fa56d2
+        name: Authorization
+        value: Bearer {% response 'body', 'req_55a63f4944c94de09f45b8888e348cd9',
+          'b64::JC5pZFRva2Vu::46b', 'never', 60 %}
+    authentication:
+      type: none
+    metaSortKey: -1739739547490.5
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_8c3dbd2764cd4c399ca723d4692c929e
+    parentId: wrk_4c2fd26e838e47b8bd7bb57439819b49
+    modified: 1739918473377
+    created: 1739739719293
+    name: Account
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1739739719293
+    environmentType: kv
+    _type: request_group
+  - _id: wrk_4c2fd26e838e47b8bd7bb57439819b49
+    parentId: null
+    modified: 1739748265288
+    created: 1635219059691
+    name: Management-home
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_1e9a6005e65943c9b2c130631f10d157
+    parentId: fld_8c3dbd2764cd4c399ca723d4692c929e
+    modified: 1739921171537
+    created: 1739919948744
+    url: "{{ _.baseUrl }}accounts"
+    name: create
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        		"creditoUsado": "",
+        		"limite": "R$ 5.500,00",
+        		"nome": "XP",
+        		"receitaMensal": "R$ 0,00",
+        		"saldo": "R$ 611,29",
+        		"userRef": "I7HEDZF76kba3ySps380jbDCfm92"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - id: pair_fdef0648520d4559bf280c5dd826593e
+        name: User-Agent
+        value: insomnia/10.3.1
+      - description: ""
+        disabled: false
+        id: pair_b1197f1f9ab743eb9876b7d3f2fa56d2
+        name: Authorization
+        value: Bearer {% response 'body', 'req_55a63f4944c94de09f45b8888e348cd9',
+          'b64::JC5pZFRva2Vu::46b', 'never', 60 %}
+    authentication:
+      type: none
+    metaSortKey: -1739739501871.375
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8a11391122484cc19536b482ca9ba146
+    parentId: fld_8c3dbd2764cd4c399ca723d4692c929e
+    modified: 1739918537712
+    created: 1739918521170
+    url: "{{ _.baseUrl }}accounts/OMk8xWQW2skIDyBYOQy9"
+    name: delete
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_fdef0648520d4559bf280c5dd826593e
+        name: User-Agent
+        value: insomnia/10.3.1
+      - description: ""
+        disabled: false
+        id: pair_b1197f1f9ab743eb9876b7d3f2fa56d2
+        name: Authorization
+        value: Bearer {% response 'body', 'req_55a63f4944c94de09f45b8888e348cd9',
+          'b64::JC5pZFRva2Vu::46b', 'never', 60 %}
+    authentication:
+      type: none
+    metaSortKey: -1739739456252.25
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_455583ca0326432e8efdb04625550a57
+    parentId: fld_85220f197cc9486e9e86b84c7fad0504
+    modified: 1739929287413
+    created: 1739922194818
+    url: "{{ _.baseUrl }}launch/{% response 'body',
+      'req_31fff23f8a0a41c9949e829cbd03e307', 'b64::JFswXS5pZA==::46b', 'never',
+      60 %}"
+    name: list
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_fdef0648520d4559bf280c5dd826593e
+        name: User-Agent
+        value: insomnia/10.3.1
+      - description: ""
+        disabled: false
+        id: pair_b1197f1f9ab743eb9876b7d3f2fa56d2
+        name: Authorization
+        value: Bearer {% response 'body', 'req_55a63f4944c94de09f45b8888e348cd9',
+          'b64::JC5pZFRva2Vu::46b', 'never', 60 %}
+    authentication:
+      type: none
+    metaSortKey: -1739739547490.5
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_85220f197cc9486e9e86b84c7fad0504
+    parentId: wrk_4c2fd26e838e47b8bd7bb57439819b49
+    modified: 1739922194816
+    created: 1739922194816
+    name: Launch
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1739739538266
+    environmentType: kv
+    _type: request_group
+  - _id: req_68785802f3044d41bc85e142cda2dd62
+    parentId: fld_85220f197cc9486e9e86b84c7fad0504
+    modified: 1739922194819
+    created: 1739922194819
+    url: "{{ _.baseUrl }}accounts"
+    name: create
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        		"creditoUsado": "",
+        		"limite": "R$ 5.500,00",
+        		"nome": "XP",
+        		"receitaMensal": "R$ 0,00",
+        		"saldo": "R$ 611,29",
+        		"userRef": "I7HEDZF76kba3ySps380jbDCfm92"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - id: pair_fdef0648520d4559bf280c5dd826593e
+        name: User-Agent
+        value: insomnia/10.3.1
+      - description: ""
+        disabled: false
+        id: pair_b1197f1f9ab743eb9876b7d3f2fa56d2
+        name: Authorization
+        value: Bearer {% response 'body', 'req_55a63f4944c94de09f45b8888e348cd9',
+          'b64::JC5pZFRva2Vu::46b', 'never', 60 %}
+    authentication:
+      type: none
+    metaSortKey: -1739739501871.375
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2dc64c50255c435586ed09ddf9549273
+    parentId: fld_85220f197cc9486e9e86b84c7fad0504
+    modified: 1739922194819
+    created: 1739922194819
+    url: "{{ _.baseUrl }}accounts/OMk8xWQW2skIDyBYOQy9"
+    name: delete
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_fdef0648520d4559bf280c5dd826593e
+        name: User-Agent
+        value: insomnia/10.3.1
+      - description: ""
+        disabled: false
+        id: pair_b1197f1f9ab743eb9876b7d3f2fa56d2
+        name: Authorization
+        value: Bearer {% response 'body', 'req_55a63f4944c94de09f45b8888e348cd9',
+          'b64::JC5pZFRva2Vu::46b', 'never', 60 %}
+    authentication:
+      type: none
+    metaSortKey: -1739739456252.25
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_55a63f4944c94de09f45b8888e348cd9
+    parentId: fld_4400936ad27f4c84a1e5d3c8c5b7f09b
+    modified: 1739967882786
+    created: 1739739361397
+    url: https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={{
+      _.firebase_api_key }}
+    name: Login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "email": "teste@gmail.com",
+          "password": "123456",
+          "returnSecureToken": true
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.3.1
+    authentication: {}
+    metaSortKey: -1739739365014
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_4400936ad27f4c84a1e5d3c8c5b7f09b
+    parentId: wrk_4c2fd26e838e47b8bd7bb57439819b49
+    modified: 1739748265282
+    created: 1739739357239
+    name: Firebase
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1739739357239
+    environmentType: kv
+    _type: request_group
+  - _id: env_485ca7118f2a57e95537db1f9b47d1e4e591878f
+    parentId: wrk_4c2fd26e838e47b8bd7bb57439819b49
+    modified: 1739748265280
+    created: 1635219059696
+    name: dev
+    data:
+      baseUrl: localhost:3000/
+      firebase_api_key: AIzaSyAjScObtR-APzDRKljR7es6tU3TjYFZZB4
+    dataPropertyOrder:
+      "&":
+        - baseUrl
+        - firebase_api_key
+    color: null
+    isPrivate: false
+    metaSortKey: 1635219059696
+    _type: environment
+  - _id: jar_485ca7118f2a57e95537db1f9b47d1e4e591878f
+    parentId: wrk_4c2fd26e838e47b8bd7bb57439819b49
+    modified: 1739748265488
+    created: 1739748265488
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: env_8b90f4036a904a9cadfb6773910a64f4
+    parentId: env_485ca7118f2a57e95537db1f9b47d1e4e591878f
+    modified: 1739759665437
+    created: 1739759585717
+    name: dev 5000
+    data:
+      baseUrl: localhost:5000/
+      firebase_api_key: AIzaSyAjScObtR-APzDRKljR7es6tU3TjYFZZB4
+    dataPropertyOrder:
+      "&":
+        - baseUrl
+        - firebase_api_key
+    color: null
+    isPrivate: false
+    metaSortKey: 1739759585717
+    environmentType: kv
+    kvPairData:
+      - id: envPair_1522120733bd418a9a18f789a07874ea
+        name: baseUrl
+        value: localhost:5000/
+        type: str
+        enabled: true
+      - id: envPair_4264570638f34f1a893ba86de147950e
+        name: firebase_api_key
+        value: AIzaSyAjScObtR-APzDRKljR7es6tU3TjYFZZB4
+        type: str
+        enabled: true
+    _type: environment
