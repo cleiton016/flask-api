@@ -1,0 +1,14 @@
+
+services:
+  api:
+    build: .
+    container_name: flask_dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app  # Monta o diretório local dentro do container
+    environment:
+      - FLASK_APP=main.py
+      - FLASK_ENV=development
+      - PYTHONPATH=/app
+    command: ["flask", "run", "--host=0.0.0.0", "--port=3000", "--debug"]
