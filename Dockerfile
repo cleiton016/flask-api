@@ -10,8 +10,10 @@ COPY requirements.txt .
 # Instala as dependências do projeto
 RUN pip install --no-cache-dir -r requirements.txt
 
+ENV FIREBASE_CREDENTIALS_PATH="/app/firebase-adminsdk.json"
+
 # Copia todo o código para dentro do container
 COPY . .
 
 # Comando para rodar a aplicação
-CMD ["flask", "run", "--host=0.0.0.0", "--port=3000", "--debug"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000", "--debug"]
