@@ -305,7 +305,7 @@ resources:
     name: dev
     data:
       baseUrl: localhost:3000/
-      firebase_api_key: AIzaSyAjScObtR-APzDRKljR7es6tU3TjYFZZB4
+      firebase_api_key: 
     dataPropertyOrder:
       "&":
         - baseUrl
@@ -328,7 +328,7 @@ resources:
     name: dev 5000
     data:
       baseUrl: localhost:5000/
-      firebase_api_key: AIzaSyAjScObtR-APzDRKljR7es6tU3TjYFZZB4
+      firebase_api_key:  
     dataPropertyOrder:
       "&":
         - baseUrl
@@ -345,7 +345,7 @@ resources:
         enabled: true
       - id: envPair_4264570638f34f1a893ba86de147950e
         name: firebase_api_key
-        value: AIzaSyAjScObtR-APzDRKljR7es6tU3TjYFZZB4
+        value:  
         type: str
         enabled: true
     _type: environment
