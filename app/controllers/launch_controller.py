@@ -1,11 +1,13 @@
 from flask import request, jsonify
-from app.schemas.launch_schema import launch_schema
+from app.schemas.launch_schema import launch_schema, launch_query_schema
 from app.services.launch_service import LaunchService
 
 class LaunchController:
     @staticmethod
     def get(id):
-        return jsonify(LaunchService.get(id))
+        ## ober os query params
+        params = launch_query_schema.load(request.args)
+        return jsonify(LaunchService.get(id, params))
 
     @staticmethod
     def create():
