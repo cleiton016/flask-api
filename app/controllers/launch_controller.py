@@ -16,7 +16,14 @@ class LaunchController:
             return jsonify(LaunchService.create(data))
         except Exception as e:
             return {"error": str(e)}, 400
-
+        
+    @staticmethod
+    def update(id):
+        try:
+            data = launch_schema.load(request.json)
+            return jsonify(LaunchService.update(id, data))
+        except Exception as e:
+            return {"error": str(e)}, 400
     @staticmethod
     def delete(id):
         return jsonify(LaunchService.delete(id))
