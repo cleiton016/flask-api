@@ -1,0 +1,39 @@
+name: Deploy Flask API
+
+on:
+  push:
+    branches:
+      - main  # Dispara o deploy ao push na branch main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛒 Clonar repositório
+        uses: actions/checkout@v3
+
+      - name: 🔐 Configurar SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 18.230.207.170 >> ~/.ssh/known_hosts
+
+      - name: 🚀 Deploy na EC2
+        run: |
+          ssh -i ~/.ssh/id_rsa ubuntu@18.230.207.170 << 'EOF'
+            cd /home/ubuntu/seu-projeto
+
+            # Puxa o código atualizado
+            git pull origin main
+
+            # Ativa o ambiente virtual
+            source venv/bin/activate
+
+            # Instala dependências
+            pip install -r requirements.txt
+
+            # Reinicia a aplicação com PM2
+            pm2 restart flask-app
+          EOF
