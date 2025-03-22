@@ -7,7 +7,7 @@ from firebase_admin import credentials
 
 def create_app():
     """Create and configure an instance of the Flask application"""
-    cred = credentials.Certificate(Config.FIREBASE_CREDENTIALS_PATH)
+    cred = credentials.Certificate(Config.get_secret())
     firebase_admin.initialize_app(cred)
     
     app = Flask(__name__)
