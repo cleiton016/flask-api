@@ -47,6 +47,19 @@ source <mac/linux>_venv/bin/activate
 deactivate
 ```
 
+### Instale as dependencias
+
+```sh
+pip install -r requirements.txt
+```
+
+### Iniciando aplicação
+```sh
+flash run
+## Modo debug
+flash run --debug
+```
+
 ## 3 Dias Uteis
 ### Se o VsCode não estiver encontrando os imports
 1. Selecione o interpretador correto
