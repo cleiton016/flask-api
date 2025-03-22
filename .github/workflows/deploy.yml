@@ -23,7 +23,7 @@ jobs:
       - name: 🚀 Deploy na EC2
         run: |
           ssh -i ~/.ssh/id_rsa ubuntu@18.230.207.170 << 'EOF'
-            cd /home/ubuntu/seu-projeto
+            cd flask-api
 
             # Puxa o código atualizado
             git pull origin main
