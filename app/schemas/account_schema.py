@@ -1,6 +1,8 @@
 from marshmallow import Schema, fields, ValidationError
 
-class AccountSchema(Schema):
+from app.schemas.base_schema import BaseSchema
+
+class AccountSchema(BaseSchema):
     contaSalario = fields.Boolean(required=True, default=False, error_messages={"required": "O campo contaSalario é obrigatório"})
     creditoUsado = fields.String(required=False)
     limite = fields.String(required=True, error_messages={"required": "O campo limite é obrigatório"})

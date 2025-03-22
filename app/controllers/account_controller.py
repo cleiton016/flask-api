@@ -16,5 +16,12 @@ class AccountController:
             return {"error": str(e)}, 400
 
     @staticmethod
+    def update(id):
+        try:
+            data = account_schema.load(request.json)
+            return jsonify(AccountService.update(id, data))
+        except Exception as e:
+            return {"error": str(e)}, 400
+    @staticmethod
     def delete(id):
         return jsonify(AccountService.delete(id))

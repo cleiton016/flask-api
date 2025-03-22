@@ -12,6 +12,11 @@ class AccountService(BaseService):
     def create( data):
         AccountModel.create(data)
         return {"success": True, "message": "Criado com sucesso"}
+    
+    @staticmethod
+    def update(id, data):
+        AccountModel.update(id, data)
+        return {"success": True, "message": "Atualizado com sucesso"}
 
     @staticmethod
     def delete(id):
